@@ -20,6 +20,10 @@ app.use('/api', require('./routes'))
 
 //enable cors
 app.use(cors());
+
+// Set static folder
+app.use(express.static('public'))
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
